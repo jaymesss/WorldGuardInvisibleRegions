@@ -1,4 +1,5 @@
 ## Basic Spigot plugin which adds a region flag to WorldGuard to vanish players inside of a WorldGuard region.
+### Tested on WorldGuard 7.0.0
 
 **Region Flag:** invisibility (Allow/Deny)
 
