@@ -1,0 +1,7 @@
+name: WorldGuardInvisibleRegions
+version: 1.0.0
+api-version: 1.13
+description: An additional WorldGuard flag to make players invisible inside of a region
+main: me.jaymesss.invisibleregions.InvisibleRegions
+author: ['jaymesss']
+depend: ['WorldGuard']

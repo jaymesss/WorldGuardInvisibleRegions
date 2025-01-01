@@ -1,0 +1,2 @@
+debug: false
+bypass-permission: true #If enabled, players with the permission 'invisibleregions.always-visible' will not become invisible in invisibility regions (Recommended, to keep vanish plugins working)
