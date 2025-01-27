@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class InvisibleListener implements Listener {
 
@@ -21,8 +22,9 @@ public class InvisibleListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerQuit(PlayerQuitEvent event) {
-        InvisibleRegions.getInstance().disableInvisibility(event.getPlayer());
+    public void onPlayerTeleport(PlayerTeleportEvent event) {
+        Player player = event.getPlayer();
+        checkStep(player);
     }
 
     @EventHandler
@@ -31,6 +33,11 @@ public class InvisibleListener implements Listener {
             return;
         }
         checkStep(event.getPlayer());
+    }
+
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent event) {
+        InvisibleRegions.getInstance().disableInvisibility(event.getPlayer());
     }
 
     private void checkStep(Player player) {
